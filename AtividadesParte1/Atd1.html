@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+
+    <h2>Programa Situação da Turma</h2>
+    <hr>
+    <p>
+        Nome Aluno(a):
+        <input type="text" id="inTitulo">
+    </p>
+    <p>
+        1°Nota:
+        <input type="text" id="notaUm">
+    </p>
+    <p>
+        2°Nota:
+        <input type="text" id="notaDois">
+    </p>
+    <p>
+        <button id="aluno">Exibir média Aluno</button>
+        <button id="turma">Exibir média da Turma</button>
+    </p>
+
+    <script>
+        function nomeNotas(){
+            let inTitulo = document.getElementById('inTitulo')
+            let notaUm = document.getElementById('notaUm')
+            let notaDois = document.getElementById('notaDois')
+
+            let titulo = inTitulo.value
+            let um = notaUm.value
+            let dois = notaDois.value
+
+            const aluno = document.getElementById('aluno')
+            const turma =  document.getElementById('turma')
+
+            aluno.addEventListener('click' function()){
+                
+                let um = aluno.value
+                
+                if(nota >= 7){
+                    console.log('Você foi aprovado(a)')
+                }else if(nota > 7){
+                    console.log('Você está de recuperação')
+                } else if(nota > 3){
+                    console.log('Você foi reprovado')
+                }
+            }
+
+
+        }
+
+        let aluno = document.getElementById('aluno')
+        aluno.addEventListener('click', nomeNotas)
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <img class="caixa2" src="img/nasa-rTZW4f02zY8-unsplash.jpg" alt="" width="500px">
+
+    <div class="caixa">
+    <h2>Programa Fuso Horário</h2>
+    <hr>
+    <p>
+        Hora no Brasil(hh:mm)
+        <input type="text" id="inTitulo" id="inDuracao">
+    </p>
+    <p>
+        <button onclick="adicionarHora()" id="btnHora">Exibir Hora na França</button>
+    </p>
+    <p id="outTitulo"></p>
+    <p id="outHora"></p>
+    <p id="outDuracao"></p>
+</div>
+
+    <script>
+        function adicionarHora(){
+            let inTitulo = document.getElementById('inTitulo')
+            let inDuracao = document.getElementById('inDuracao')
+            let outTitulo = document.getElementById('outTitulo')
+            let outHora = document.getElementById('outHora')
+
+            let titulo = inTitulo.value
+            let duracao = Number(inDuracao)
+
+            let hora = Math.ceil(+ 4)
+
+
+            outTitulo.textContent = titulo
+            outHora.textContent = `Hora na França ${hora}Am`
+        }
+
+        let btnHora = document.getElementById('btnHora')
+        btnHora.addEventListener('click', adicionarHora)
+
+        </script>
+    
+</body>
+</html>
